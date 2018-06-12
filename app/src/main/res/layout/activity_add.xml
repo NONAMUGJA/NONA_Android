@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddActivity">
+    android:background="#fafafa"
+    tools:context=".Activity.AddActivity">
 
     <Button
         android:id="@+id/add_button"
@@ -68,7 +69,7 @@
         android:layout_marginStart="40dp"
         android:background="@drawable/edit_radius"
         android:ems="10"
-        android:inputType="numberPassword"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/add_comment"
         app:layout_constraintDimensionRatio="7:1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +93,34 @@
         android:id="@+id/add_comment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_radius"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_lock"
+        app:layout_constraintDimensionRatio="7:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_count" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="자물쇠 번호"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_lock"
+        app:layout_constraintStart_toStartOf="@+id/add_lock" />
+
+    <EditText
+        android:id="@+id/add_lock"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="40dp"
         android:layout_marginStart="40dp"
@@ -103,6 +132,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_count" />
+        app:layout_constraintTop_toBottomOf="@+id/add_comment" />
 
 </android.support.constraint.ConstraintLayout>

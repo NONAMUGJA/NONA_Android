@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RequestActivity">
+    tools:context=".Activity.RequestActivity"
+    android:background="#fafafa">
 
     <TextView
         android:id="@+id/textView4"
@@ -105,4 +106,5 @@
         app:layout_constraintDimensionRatio="10:1.2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

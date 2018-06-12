@@ -4,110 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".Activity.LoginActivity">
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#ff9800"
-        android:orientation="vertical"
-        app:layout_constraintDimensionRatio="30:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:background="#8bc34a"
-        android:orientation="vertical"
-        app:layout_constraintDimensionRatio="50:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:background="#ff9800"
-        android:orientation="vertical"
-        app:layout_constraintDimensionRatio="60:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:background="#ff9800"
-        android:orientation="vertical"
-        app:layout_constraintDimensionRatio="70:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#ff9800"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="30:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:background="#8bc34a"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintDimensionRatio="50:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:background="#ff9800"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintDimensionRatio="60:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayout8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:background="#ff9800"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-        app:layout_constraintDimensionRatio="70:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Login"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="40dp"
         android:layout_marginStart="40dp"
         android:background="@drawable/button_radius"
@@ -115,7 +19,7 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintDimensionRatio="10:1.3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -124,16 +28,16 @@
         android:id="@+id/constraintLayout5"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="40dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edit_radius"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintDimensionRatio="5.5:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -180,13 +84,13 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
+        android:layout_width="331dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edit_radius"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintDimensionRatio="5.5:1"
+        app:layout_constraintBottom_toTopOf="@+id/Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -233,23 +137,8 @@
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout14" />
-
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginBottom="8dp"
@@ -257,7 +146,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
