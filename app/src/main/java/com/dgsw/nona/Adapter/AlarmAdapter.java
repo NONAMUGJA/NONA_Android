@@ -1,3 +1,6 @@
-package com.dgsw.nona.Adapter;
+package com.dgsw.nona.adapter;
 
-public class AlarmAdapter {String string; String from; }
+public class AlarmAdapter {
+    String string;
+    String from;
+}

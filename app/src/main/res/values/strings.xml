@@ -7,4 +7,10 @@
     <string name="title_activity_login">로그인</string>
     <string name="id">ID</string>
     <string name="pw">PW</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="comment">주인의 한마디</string>
+    <string name="login">로그인</string>
+    <string name="owner">주인</string>
+    <string name="food_image">음식 사진</string>
 </resources>
