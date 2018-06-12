@@ -1,13 +1,13 @@
-package com.dgsw.nona.Activity;
+package com.dgsw.nona.activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.dgsw.nona.R;
 
@@ -32,7 +32,7 @@ public class RequestActivity extends AppCompatActivity {
                 String count = request_count.getText().toString();
                 String comment = request_comment.getText().toString();
 
-                if(Check(food, count, comment) == 1){
+                if(Check(v, food, count, comment) == 1){
                     startActivity(nextIntent);
                 }
             }
@@ -43,18 +43,18 @@ public class RequestActivity extends AppCompatActivity {
 
     }
 
-    private int Check(String food, String count, String comment){
+    private int Check(View view, String food, String count, String comment){
 
         if(food.isEmpty()){
-            Toast.makeText(this, "교환할 음식을 입력하십시오.", Toast.LENGTH_LONG);
+            Snackbar.make(view, "교환할 음식을 입력하십시오.", Snackbar.LENGTH_LONG).show();
             return -1;
         }
         else if (count.isEmpty()){
-            Toast.makeText(this, "음식의 개수를 입력하십시오.", Toast.LENGTH_LONG);
+            Snackbar.make(view, "음식의 개수를 입력하십시오.", Snackbar.LENGTH_LONG).show();
             return -1;
         }
         else if (comment.isEmpty()){
-            Toast.makeText(this, "흥정이라도 해주세요 !", Toast.LENGTH_LONG);
+            Snackbar.make(view, "흥정이라도 해주세요 !", Snackbar.LENGTH_LONG).show();
             return -1;
         }
 

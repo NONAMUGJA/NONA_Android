@@ -1,13 +1,13 @@
-package com.dgsw.nona.Activity;
+package com.dgsw.nona.activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.dgsw.nona.R;
 
@@ -35,7 +35,7 @@ public class AddActivity extends AppCompatActivity {
                 String comment = add_comment.getText().toString();
                 String lock = add_lock.getText().toString();
 
-                if (Check(food, count, comment, lock) == 1){
+                if (Check(v, food, count, comment, lock) == 1){
                     startActivity(nextIntent);
                 }
 
@@ -45,22 +45,22 @@ public class AddActivity extends AppCompatActivity {
         add_btn.setOnClickListener(AddListener);
     }
 
-    private int Check(String food, String count, String comment, String lock) {
+    private int Check(View view, String food, String count, String comment, String lock) {
 
         if (food.isEmpty()){
-            Toast.makeText(this, "음식 이름을 입력하십시오.", Toast.LENGTH_LONG);
+            Snackbar.make(view, "음식 이름을 입력하십시오.", Snackbar.LENGTH_LONG).show();
             return -1;
         }
         else if (count.isEmpty()){
-            Toast.makeText(this, "개수를 입력하십시오.", Toast.LENGTH_LONG);
+            Snackbar.make(view, "개수를 입력하십시오.", Snackbar.LENGTH_LONG).show();
             return -1;
         }
         else if (comment.isEmpty()){
-            Toast.makeText(this, "하고싶은 말을 입력하십시오.", Toast.LENGTH_LONG);
+            Snackbar.make(view, "하고싶은 말을 입력하십시오.", Snackbar.LENGTH_LONG).show();
             return -1;
         }
         else if (lock.isEmpty()){
-            Toast.makeText(this, "자물쇠 번호를 입력하십시오.", Toast.LENGTH_LONG);
+            Snackbar.make(view, "자물쇠 번호를 입력하십시오.", Snackbar.LENGTH_LONG).show();
             return -1;
         }
         return 1;
