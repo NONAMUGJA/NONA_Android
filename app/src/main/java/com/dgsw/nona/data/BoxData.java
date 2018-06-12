@@ -3,7 +3,6 @@ package com.dgsw.nona.data;
 import android.graphics.drawable.Drawable;
 
 public class BoxData {
-    private int boxNo;
     private String userID;
     //private String imageID;
     private String comment;
@@ -13,8 +12,7 @@ public class BoxData {
     private String lockPW;
     private Drawable drawable;
 
-    public BoxData(int boxNo, String userID, String comment, String receiverID, String foodName, String foodCount, String lockPW, Drawable drawable) {
-        this.boxNo = boxNo;
+    public BoxData(String userID, String comment, String receiverID, String foodName, String foodCount, String lockPW, Drawable drawable) {
         this.userID = userID;
         this.comment = comment;
         this.receiverID = receiverID;
@@ -22,10 +20,6 @@ public class BoxData {
         this.foodCount = foodCount;
         this.lockPW = lockPW;
         this.drawable = drawable;
-    }
-
-    public int getBoxNo() {
-        return boxNo;
     }
 
     public String getUserID() {

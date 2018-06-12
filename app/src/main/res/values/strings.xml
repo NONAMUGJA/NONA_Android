@@ -13,4 +13,5 @@
     <string name="login">로그인</string>
     <string name="owner">주인</string>
     <string name="food_image">음식 사진</string>
+    <string name="exchange_description">교환 신청하러 가즈아!!!</string>
 </resources>

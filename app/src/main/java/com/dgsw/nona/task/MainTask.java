@@ -49,10 +49,13 @@ public class MainTask extends AsyncTask<Void, Integer, BoxData[]> {
 
             if (urlConnection.getResponseCode() != HttpURLConnection.HTTP_INTERNAL_ERROR) {
                 JSONArray jsonArray = new JSONArray(stringBuilder.toString());
-                for (int i = 0; i < jsonArray.length(); i++) {
-                    JSONObject jsonObject = jsonArray.getJSONObject(i);
-                    //TODO Drawable Download
-                    boxDataArray[Integer.parseInt(jsonObject.getString("no")) - 1] = new BoxData(Integer.parseInt(jsonObject.getString("no")), jsonObject.getString("sender"), jsonObject.getString("comment"), jsonObject.getString("receiver"), jsonObject.getString("itemTitle"), jsonObject.getString("count"), jsonObject.getString("lockpw"), null);
+                for (int i = 0; i < 9; i++) {
+                    try {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        //TODO Drawable Download
+                        boxDataArray[i] = new BoxData(jsonObject.getString("sender"), jsonObject.getString("comment"), jsonObject.getString("receiver"), jsonObject.getString("itemTitle"), jsonObject.getString("count"), jsonObject.getString("lockpw"), null);
+                    } catch (JSONException ignored) {
+                    }
                 }
                 return boxDataArray;
             }
