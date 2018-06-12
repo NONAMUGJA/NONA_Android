@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NONA_Android</string>
+    <string name="title_activity_main">노나묵자</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_login">로그인</string>
 </resources>
