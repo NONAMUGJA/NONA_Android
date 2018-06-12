@@ -1,4 +1,4 @@
-package com.dgsw.nona.activity;
+package com.dgsw.nona.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

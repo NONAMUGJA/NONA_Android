@@ -1,4 +1,4 @@
-package com.dgsw.nona.adapter;
+package com.dgsw.nona.Adapter;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dgsw.nona.activity.DetailActivity;
+import com.dgsw.nona.Activity.DetailActivity;
 import com.dgsw.nona.R;
 import com.dgsw.nona.data.BoxData;
 import com.dgsw.nona.viewholder.MainViewHolder;

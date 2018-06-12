@@ -1,4 +1,4 @@
-package com.dgsw.nona.activity;
+package com.dgsw.nona.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.dgsw.nona.adapter.MainAdapter;
+import com.dgsw.nona.Adapter.MainAdapter;
 import com.dgsw.nona.data.BoxData;
 import com.dgsw.nona.task.MainTask;
 
