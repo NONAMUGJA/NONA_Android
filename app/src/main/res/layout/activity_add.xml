@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:text="등록하기"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="10:1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="음식 이름"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_food"
+        app:layout_constraintStart_toStartOf="@+id/add_food" />
+
+    <EditText
+        android:id="@+id/add_food"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_radius"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_count"
+        app:layout_constraintDimensionRatio="7:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="개수"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_count"
+        app:layout_constraintStart_toStartOf="@+id/add_count" />
+
+    <EditText
+        android:id="@+id/add_count"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_radius"
+        android:ems="10"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@+id/add_comment"
+        app:layout_constraintDimensionRatio="7:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_food" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="하고싶은 말"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_comment"
+        app:layout_constraintStart_toStartOf="@+id/add_comment" />
+
+    <EditText
+        android:id="@+id/add_comment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_radius"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/add_button"
+        app:layout_constraintDimensionRatio="7:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_count" />
+
+</android.support.constraint.ConstraintLayout>
