@@ -23,6 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
+                                                <entry key="scalingPercent" value="80" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -33,11 +34,12 @@
                                   </option>
                                   <option name="values">
                                     <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="ffffff" />
                                       <entry key="backgroundImage" value="C:\Users\Gun\Desktop\snack.jpg" />
-                                      <entry key="backgroundLayerName" value="main_set2" />
-                                      <entry key="foregroundImage" value="C:\Users\Gun\Desktop\snack.jpg" />
-                                      <entry key="foregroundLayerName" value="main_set1" />
-                                      <entry key="outputName" value="main_back" />
+                                      <entry key="backgroundLayerName" value="background" />
+                                      <entry key="foregroundImage" value="C:\Users\kimji\StudioProjects\NONA_Android\app\src\main\res\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+                                      <entry key="foregroundLayerName" value="foreground" />
                                     </map>
                                   </option>
                                 </PersistentState>

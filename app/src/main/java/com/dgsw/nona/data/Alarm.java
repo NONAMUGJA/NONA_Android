@@ -1,4 +1,4 @@
-package com.dgsw.nona.Model;
+package com.dgsw.nona.data;
 
 class Alarm{
     String comment;

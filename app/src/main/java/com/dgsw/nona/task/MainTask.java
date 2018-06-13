@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -30,8 +31,8 @@ public class MainTask extends AsyncTask<Void, Integer, BoxData[]> {
             urlConnection.setRequestMethod("GET");
             urlConnection.setRequestProperty("Content-Type", "application/json");
             urlConnection.setRequestProperty("Accept", "application/json");
-            urlConnection.setConnectTimeout(5000);
-            urlConnection.setReadTimeout(5000);
+            urlConnection.setConnectTimeout(10000);
+            urlConnection.setReadTimeout(10000);
             InputStream inputStream = urlConnection.getInputStream();
 
             StringBuilder stringBuilder = new StringBuilder();
@@ -52,8 +53,7 @@ public class MainTask extends AsyncTask<Void, Integer, BoxData[]> {
                 for (int i = 0; i < 9; i++) {
                     try {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        //TODO Drawable Download
-                        boxDataArray[i] = new BoxData(jsonObject.getString("sender"), jsonObject.getString("comment"), jsonObject.getString("receiver"), jsonObject.getString("itemTitle"), jsonObject.getString("count"), jsonObject.getString("lockpw"), null);
+                        boxDataArray[i] = new BoxData(jsonObject.getString("sender"), jsonObject.getString("imageId"), jsonObject.getString("comment"), jsonObject.getString("receiver"), jsonObject.getString("itemTitle"), jsonObject.getString("count"), jsonObject.getString("lockpw"), null);
                     } catch (JSONException ignored) {
                     }
                 }
@@ -63,6 +63,7 @@ public class MainTask extends AsyncTask<Void, Integer, BoxData[]> {
             reader.close();
         } catch (IOException | JSONException e) {
             e.printStackTrace();
+            cancel(true);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();

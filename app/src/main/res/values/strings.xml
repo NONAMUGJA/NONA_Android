@@ -1,17 +1,18 @@
 <resources>
-    <string name="app_name">NONA_Android</string>
-    <string name="title_activity_main">노나묵자</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">노나묵자</string>
     <string name="title_activity_login">로그인</string>
     <string name="id">ID</string>
     <string name="pw">PW</string>
-    <string name="title_activity_detail">DetailActivity</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail">상세 보기</string>
     <string name="comment">주인의 한마디</string>
     <string name="login">로그인</string>
     <string name="owner">주인</string>
     <string name="food_image">음식 사진</string>
     <string name="exchange_description">교환 신청하러 가즈아!!!</string>
+    <string name="food_name">음식 이름</string>
+    <string name="add">등록하기</string>
+    <string name="count">개수</string>
+    <string name="comment_add">하고 싶은 말</string>
+    <string name="lock_pass">자물쇠 번호</string>
+    <string name="state">상태</string>
 </resources>

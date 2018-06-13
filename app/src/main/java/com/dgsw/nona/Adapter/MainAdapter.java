@@ -1,4 +1,4 @@
-package com.dgsw.nona.Adapter;
+package com.dgsw.nona.adapter;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dgsw.nona.Activity.DetailActivity;
+import com.dgsw.nona.activity.DetailActivity;
 import com.dgsw.nona.R;
 import com.dgsw.nona.data.BoxData;
 import com.dgsw.nona.viewholder.MainViewHolder;
@@ -38,8 +38,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final MainViewHolder holder, int position) {
-        final BoxData boxData = boxDataArray[position];
+    public void onBindViewHolder(@NonNull final MainViewHolder holder, final int position) {
+        BoxData boxData = null;
+        if (boxDataArray != null)
+        boxData = boxDataArray[position];
 
         if (boxData != null) {
             Drawable drawable = boxData.getDrawable();
@@ -52,18 +54,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
             holder.foodCount.setText(boxData.getFoodCount());
         }
 
+        final BoxData finalBoxData = boxData;
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activityWeakReference.get(), DetailActivity.class);
-                if (boxData != null) {
+                if (finalBoxData != null) {
                     //FIXME userName
-                    intent.putExtra("owner", boxData.getUserID());
-                    intent.putExtra("comment", boxData.getComment());
-                    intent.putExtra("title", boxData.getFoodName());
-                    intent.putExtra("subTitle", boxData.getFoodCount());
+                    intent.putExtra("owner", finalBoxData.getUserID());
+                    intent.putExtra("comment", finalBoxData.getComment());
+                    intent.putExtra("title", finalBoxData.getFoodName());
+                    intent.putExtra("subTitle", finalBoxData.getFoodCount());
+                    intent.putExtra("receiver", finalBoxData.getReceiverID());
 
-                    Drawable drawable = boxData.getDrawable();
+                    Drawable drawable = finalBoxData.getDrawable();
 
                     if (drawable instanceof BitmapDrawable) {
                         Bitmap bitmap = ((BitmapDrawable) holder.foodImage.getDrawable()).getBitmap();
@@ -76,6 +80,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainViewHolder> {
                 } else {
                     intent.putExtra("empty", true);
                 }
+                intent.putExtra("boxNo", holder.getAdapterPosition());
                 ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(activityWeakReference.get(), v, "imageView");
 
                 activityWeakReference.get().startActivity(intent, activityOptions.toBundle());

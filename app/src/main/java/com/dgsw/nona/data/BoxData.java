@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable;
 
 public class BoxData {
     private String userID;
-    //private String imageID;
+    private String imageID;
     private String comment;
     private String receiverID;
     private String foodName;
@@ -12,8 +12,9 @@ public class BoxData {
     private String lockPW;
     private Drawable drawable;
 
-    public BoxData(String userID, String comment, String receiverID, String foodName, String foodCount, String lockPW, Drawable drawable) {
+    public BoxData(String userID, String imageID, String comment, String receiverID, String foodName, String foodCount, String lockPW, Drawable drawable) {
         this.userID = userID;
+        this.imageID = imageID;
         this.comment = comment;
         this.receiverID = receiverID;
         this.foodName = foodName;
@@ -46,7 +47,15 @@ public class BoxData {
         return lockPW;
     }
 
+    public String getImageID() {
+        return imageID;
+    }
+
     public Drawable getDrawable() {
         return drawable;
+    }
+
+    public void setDrawable(Drawable drawable) {
+        this.drawable = drawable;
     }
 }
